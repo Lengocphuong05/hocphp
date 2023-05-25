@@ -45,7 +45,7 @@ printTheMultiplicationTable();
 <?php
 function  checkStringContainsSpecificWord(){
  
-  $word = "mè";
+  $word = "mèo";
   $mystring = "Có một chú mèo con";
    
 
@@ -462,7 +462,23 @@ sumOfOddNumbers();
 
 
 //29.Viết chương trình PHP để tìm số chính phương trong một khoảng cho trước.
-find the perfect square in a given interval
+<?php
+function isPerfectSquare($number){
+   $root = sqrt($number);
+   return ($root * $root == $number);
+   }
+   function findPerfectSquares($start, $end){
+   for($i=$start; $i<=$end; $i++){
+   if(isPerfectSquare($i)){
+   echo $i . " is a perfect square.
+   ";
+   }
+   }
+   }
+   $start = 1;
+   $end = 100;
+   findPerfectSquares($start, $end);
+   ?>
 
 //30.Viết chương trình PHP để kiểm tra xem một chuỗi có phải là chuỗi con của một chuỗi khác hay không.
 <?php
